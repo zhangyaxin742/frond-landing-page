@@ -287,7 +287,7 @@ export default function App() {
                   <span className="hero-line text-white">The intelligence layer</span>
                   <br />
                   <span className="hero-line text-white">between </span>
-                  <span className="hero-line text-rgb-61-184-124 italic">breakthrough science</span>
+                  <span className="hero-line text-rgb-61-184-124 italic"> breakthrough science </span>
                   <br />
                   <span className="hero-line text-white">and the capital it deserves.</span>
                 </p>
