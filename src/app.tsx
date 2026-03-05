@@ -28,6 +28,8 @@ const marqueePrimary = [
 
 const marqueeSecondary = ['40,000+ PATENTS INDEXED', 'SBIR/STTR AWARDS API', 'DOE LOAN PROGRAMS']
 
+const trlMarkerIcon = 'https://www.figma.com/api/mcp/asset/cc923146-e4d6-4108-93c5-d0c4401f5d05'
+
 const feedCards = [
   {
     tag: 'SBIR Phase II → III Signal',
@@ -247,24 +249,171 @@ export default function App() {
               35% of emissions reductions needed by 2050 must come from technologies not yet commercially available. The window lies in the TRL (Technology Readiness Level) 6–8 range, and stagnates with zero infrastructure -- until now.
             </p>
 
-            <div className="mt-14 rounded-[12px] border border-spring-green/20 bg-[#0c2218] px-8 py-10 text-left">
-              <div className="flex items-center justify-between text-xs font-mono uppercase tracking-[1.2px] text-slate-400">
-                <span className="text-spring-green">Early research</span>
-                <span className="text-amber-signal">Valley of death</span>
-                <span className="text-white">Commercialization</span>
-              </div>
-              <div className="mt-4 h-2 w-full rounded-full bg-[#1f3a2f]">
-                <div className="h-full w-[60%] rounded-full bg-gradient-to-r from-spring-green via-amber-signal to-slate-500" />
-              </div>
-              <div className="mt-8 grid gap-6 md:grid-cols-3">
-                <div className="rounded-[6px] border border-spring-green/30 bg-[#0f1f18] px-4 py-3 text-xs font-mono uppercase tracking-[1px] text-spring-green">
-                  Lab Scale
+            <div className="mt-14 rounded-[12px] border border-[#1f3a2f] bg-[#0c2218] px-6 py-8 text-left">
+              <div className="relative mx-auto h-[300px] w-full max-w-[1280px]">
+                <div className="absolute left-1/2 top-[110px] -translate-x-1/2 -translate-y-1/2 font-mono text-[12px] uppercase tracking-[0.6px] text-amber-signal">
+                  Valley of death
                 </div>
-                <div className="rounded-[6px] border border-amber-signal/60 bg-[#2a2412] px-4 py-3 text-xs font-mono uppercase tracking-[1px] text-amber-signal shadow-[0_0_15px_rgba(200,168,75,0.3)]">
-                  Fervo Energy (Pilot)
+                <div className="absolute left-[13.59%] top-[84px] flex flex-col items-center">
+                  <div className="rounded-[4px] border border-[rgba(61,184,124,0.3)] bg-[#0c2218] px-[13px] py-[5px] text-[12px] font-mono text-spring-green">
+                    Lab Scale
+                  </div>
+                  <div className="h-[30px] w-px bg-[rgba(61,184,124,0.3)]" />
                 </div>
-                <div className="rounded-[6px] border border-slate-600 bg-[#111827] px-4 py-3 text-xs font-mono uppercase tracking-[1px] text-white">
-                  Climeworks Mammoth
+                <div className="absolute left-[60.31%] top-[72px] flex flex-col items-center">
+                  <div className="flex items-center gap-2 rounded-[4px] border border-amber-signal bg-[#2a2412] px-[13px] py-[5px] text-[12px] font-mono text-amber-signal shadow-[0px_0px_15px_rgba(200,168,75,0.3)]">
+                    <img src={trlMarkerIcon} alt="" aria-hidden="true" className="h-[16px] w-[14px]" />
+                    Fervo Energy (Pilot)
+                  </div>
+                  <div className="h-[42px] w-px bg-amber-signal" />
+                </div>
+                <div className="absolute left-[80.94%] top-[57px] flex flex-col items-center">
+                  <div className="rounded-[4px] border border-[#475569] bg-[#1e293b] px-[13px] py-[5px] text-[12px] font-mono text-white shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]">
+                    Climeworks Mammoth
+                  </div>
+                  <div className="h-[56px] w-px bg-[#475569]" />
+                </div>
+                <div className="absolute left-0 right-0 top-[123px] flex items-center justify-between px-2 font-mono text-[12px] uppercase tracking-[0.6px]">
+                  <span className="text-spring-green">Early Research</span>
+                  <span className="text-white">Commercial Scale</span>
+                </div>
+                <div className="absolute left-0 top-[139px] w-full overflow-x-auto pb-4">
+                  <div className="grid min-w-[1000px] grid-cols-9 gap-0">
+                    <div
+                      className="relative flex h-[143px] flex-col justify-between rounded-[2px] border px-[16px] py-[16px]"
+                      style={{ backgroundColor: 'rgba(61,184,124,0.15)', borderColor: 'rgba(4,120,87,0.1)' }}
+                    >
+                      <span className="text-[12px] font-mono uppercase tracking-[0.6px] text-spring-green">TRL 1</span>
+                      <span className="font-serif text-[18px] leading-[22.5px] text-white">
+                        Basic
+                        <br />
+                        Principles
+                      </span>
+                      <span className="font-display text-[12px] font-semibold leading-[16px] text-slate-400">
+                        Scientific
+                        <br />
+                        research begins
+                      </span>
+                    </div>
+                    <div
+                      className="relative flex h-[143px] flex-col justify-between rounded-[2px] border p-[17px]"
+                      style={{ backgroundColor: 'rgba(61,184,124,0.15)', borderColor: 'rgba(4,120,87,0.1)' }}
+                    >
+                      <span className="text-[12px] font-mono uppercase tracking-[0.6px] text-spring-green">TRL 2</span>
+                      <span className="font-serif text-[18px] leading-[22.5px] text-white">Concept</span>
+                      <span className="font-display text-[12px] font-semibold leading-[16px] text-slate-400">
+                        Technology
+                        <br />
+                        concept
+                        <br />
+                        formulation
+                      </span>
+                    </div>
+                    <div
+                      className="relative flex h-[143px] flex-col justify-between rounded-[2px] border px-[16px] py-[16px]"
+                      style={{ backgroundColor: 'rgba(61,184,124,0.15)', borderColor: 'rgba(4,120,87,0.1)' }}
+                    >
+                      <span className="text-[12px] font-mono uppercase tracking-[0.6px] text-spring-green">TRL 3</span>
+                      <span className="font-serif text-[18px] leading-[22.5px] text-white">
+                        Proof of
+                        <br />
+                        Concept
+                      </span>
+                      <span className="font-display text-[12px] font-semibold leading-[16px] text-slate-400">
+                        Experimental
+                        <br />
+                        proof
+                      </span>
+                    </div>
+                    <div
+                      className="relative flex h-[143px] flex-col justify-between rounded-[2px] border p-[17px]"
+                      style={{
+                        backgroundColor: 'rgba(200,168,75,0.25)',
+                        borderColor: 'rgba(200,168,75,0.3)',
+                        boxShadow: '0px 0px 20px -5px rgba(200,168,75,0.2)',
+                      }}
+                    >
+                      <div className="flex items-center gap-1">
+                        <span className="text-[12px] font-mono uppercase tracking-[0.6px] text-amber-signal">TRL 4</span>
+                        <img src={trlMarkerIcon} alt="" aria-hidden="true" className="h-[16px] w-[14px]" />
+                      </div>
+                      <span className="font-serif text-[18px] leading-[22.5px] text-white">Validation</span>
+                      <span className="font-display text-[12px] font-semibold leading-[16px] text-slate-400">Lab validation</span>
+                      <span className="absolute bottom-0 left-0 h-[4px] w-full bg-amber-signal" />
+                    </div>
+                    <div
+                      className="relative flex h-[143px] flex-col justify-between rounded-[2px] border p-[17px]"
+                      style={{
+                        backgroundColor: 'rgba(200,168,75,0.25)',
+                        borderColor: 'rgba(200,168,75,0.3)',
+                        boxShadow: '0px 0px 20px -5px rgba(200,168,75,0.2)',
+                      }}
+                    >
+                      <div className="flex items-center gap-1">
+                        <span className="text-[12px] font-mono uppercase tracking-[0.6px] text-amber-signal">TRL 5</span>
+                        <img src={trlMarkerIcon} alt="" aria-hidden="true" className="h-[16px] w-[14px]" />
+                      </div>
+                      <span className="font-serif text-[18px] leading-[22.5px] text-white">Validation</span>
+                      <span className="font-display text-[12px] font-semibold leading-[16px] text-slate-400">
+                        Relevant
+                        <br />
+                        environment
+                      </span>
+                      <span className="absolute bottom-0 left-0 h-[4px] w-full bg-amber-signal" />
+                    </div>
+                    <div
+                      className="relative flex h-[143px] flex-col justify-between rounded-[2px] border p-[17px]"
+                      style={{
+                        backgroundColor: 'rgba(200,168,75,0.25)',
+                        borderColor: 'rgba(200,168,75,0.3)',
+                        boxShadow: '0px 0px 20px -5px rgba(200,168,75,0.2)',
+                      }}
+                    >
+                      <div className="flex items-center gap-1">
+                        <span className="text-[12px] font-mono uppercase tracking-[0.6px] text-amber-signal">TRL 6</span>
+                        <img src={trlMarkerIcon} alt="" aria-hidden="true" className="h-[16px] w-[14px]" />
+                      </div>
+                      <span className="font-serif text-[18px] leading-[22.5px] text-white">Demonstration</span>
+                      <span className="font-display text-[12px] font-semibold leading-[16px] text-slate-400">Prototype demo</span>
+                      <span className="absolute bottom-0 left-0 h-[4px] w-full bg-amber-signal" />
+                    </div>
+                    <div
+                      className="relative flex h-[143px] flex-col justify-between rounded-[2px] border p-[17px]"
+                      style={{
+                        backgroundColor: 'rgba(200,168,75,0.25)',
+                        borderColor: 'rgba(200,168,75,0.3)',
+                        boxShadow: '0px 0px 20px -5px rgba(200,168,75,0.2)',
+                      }}
+                    >
+                      <div className="flex items-center gap-1">
+                        <span className="text-[12px] font-mono uppercase tracking-[0.6px] text-amber-signal">TRL 7</span>
+                        <img src={trlMarkerIcon} alt="" aria-hidden="true" className="h-[16px] w-[14px]" />
+                      </div>
+                      <span className="font-serif text-[18px] leading-[22.5px] text-white">Demonstration</span>
+                      <span className="font-display text-[12px] font-semibold leading-[16px] text-slate-400">System prototype</span>
+                      <span className="absolute bottom-0 left-0 h-[4px] w-full bg-amber-signal" />
+                    </div>
+                    <div
+                      className="relative flex h-[143px] flex-col justify-between rounded-[2px] border p-[17px]"
+                      style={{ backgroundColor: 'rgba(100,116,139,0.2)', borderColor: 'rgba(255,255,255,0.1)' }}
+                    >
+                      <span className="text-[12px] font-mono uppercase tracking-[0.6px] text-slate-400">TRL 8</span>
+                      <span className="font-serif text-[18px] leading-[22.5px] text-white">Qualified</span>
+                      <span className="font-display text-[12px] font-semibold leading-[16px] text-slate-400">System complete</span>
+                    </div>
+                    <div
+                      className="relative flex h-[143px] flex-col justify-between rounded-[2px] border p-[17px]"
+                      style={{ backgroundColor: 'rgba(100,116,139,0.2)', borderColor: 'rgba(255,255,255,0.1)' }}
+                    >
+                      <span className="text-[12px] font-mono uppercase tracking-[0.6px] text-slate-400">TRL 9</span>
+                      <span className="font-serif text-[18px] leading-[22.5px] text-white">Proven</span>
+                      <span className="font-display text-[12px] font-semibold leading-[16px] text-slate-400">
+                        Actual system
+                        <br />
+                        proven
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
