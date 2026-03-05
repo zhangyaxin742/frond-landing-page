@@ -13,6 +13,7 @@ import enterpriseCheck1 from './assets/vector-141.svg'
 import enterpriseCheck2 from './assets/vector-146.svg'
 import enterpriseCheck3 from './assets/vector-151.svg'
 import enterpriseCheck4 from './assets/vector-156.svg'
+import enterpriseBadgeIcon from './assets/vector-129.svg'
 import matchIconPrimary from './assets/vector-293.svg'
 import matchIconSecondary from './assets/vector-346.svg'
 import trlMarkerIcon from './assets/vector-403.svg'
@@ -29,13 +30,30 @@ const marqueePrimary = [
 
 const marqueeSecondary = ['40,000+ PATENTS INDEXED', 'SBIR/STTR AWARDS API', 'DOE LOAN PROGRAMS']
 
-const feedCards = [
+type FeedTag = {
+  label: string
+  variant?: 'amber'
+  minWidth?: string
+}
+
+type FeedCard = {
+  tag: string
+  status: string
+  title: string
+  meta: string
+  tags: FeedTag[]
+  matches?: string
+  matchIcon: string
+  accent: string
+}
+
+const feedCards: FeedCard[] = [
   {
     tag: 'SBIR Phase II → III Signal',
     status: '● New',
     title: 'Advanced Solid-State Electrolyte for Long-Duration Grid Storage',
     meta: 'Pacific Northwest National Laboratory · PI: Dr. Sarah Chen',
-    tags: ['TRL 5', '$1.8M', 'LDES'],
+    tags: [{ label: 'TRL 5' }, { label: '$1.8M' }, { label: 'LDES' }],
     matches: '3 Investor Matches',
     matchIcon: matchIconPrimary,
     accent: 'bg-cyan-signal',
@@ -45,8 +63,7 @@ const feedCards = [
     status: 'Awarded',
     title: 'Supercritical CO₂ Heat Exchange for Enhanced Geothermal Systems',
     meta: 'Sandia National Laboratories · Award #DE-AR0001842',
-    tags: ['TRL 4', '$3.2M', 'EGS'],
-    matches: '2 Investor Matches',
+    tags: [{ label: 'TRL 4' }, { label: '$3.2M' }, { label: 'EGS' }],
     matchIcon: matchIconPrimary,
     accent: 'bg-spring-green',
   },
@@ -55,8 +72,10 @@ const feedCards = [
     status: 'Published',
     title: 'Electrolyzer Membrane Architecture for Alkaline Water Electrolysis',
     meta: 'MIT Energy Initiative spin-out · Patent #US2024/0187392',
-    tags: ['TRL 6', 'Green H₂'],
-    matches: '5 Investor Matches',
+    tags: [
+      { label: 'TRL 6', variant: 'amber' },
+      { label: 'Green H₂', minWidth: 'min-w-[62px]' },
+    ],
     matchIcon: matchIconSecondary,
     accent: 'bg-amber-signal',
   },
@@ -65,8 +84,12 @@ const feedCards = [
     status: 'High Influence',
     title: 'Novel Sorbent Material for Point-Source CO₂ Capture',
     meta: 'Carnegie Mellon · Prof. James Park et al.',
-    tags: ['TRL 3', 'Carbon Capture', 'Pre-company'],
-    matches: '1 Investor Match',
+    tags: [
+      { label: 'TRL 3' },
+      { label: 'Carbon Capture', minWidth: 'min-w-[100px]' },
+      { label: 'Pre-company', minWidth: 'min-w-[82px]' },
+    ],
+    matches: '1 Investor Matches',
     matchIcon: matchIconSecondary,
     accent: 'bg-spring-green',
   },
@@ -112,6 +135,7 @@ const pricingTiers = [
       { label: 'Basic Search', icon: scoutCheck3 },
     ],
     cta: 'Start Free',
+    variant: 'scout',
   },
   {
     name: 'Analyst',
@@ -126,6 +150,7 @@ const pricingTiers = [
     ],
     cta: 'Get Analyst Access',
     highlight: true,
+    variant: 'analyst',
   },
   {
     name: 'Enterprise',
@@ -138,7 +163,9 @@ const pricingTiers = [
       { label: 'Custom Data Sources', icon: enterpriseCheck3 },
       { label: 'Dedicated Success Manager', icon: enterpriseCheck4 },
     ],
-    cta: 'Talk to Us',
+    cta: 'Talk To Us',
+    variant: 'enterprise',
+    badgeIcon: enterpriseBadgeIcon,
   },
 ]
 
@@ -424,8 +451,8 @@ export default function App() {
           </div>
         </section>
 
-        <section className="bg-black py-24" id="methodology">
-          <div className="mx-auto grid max-w-[1400px] gap-[96px] px-6 lg:grid-cols-[1.05fr_1fr]">
+        <section className="bg-black px-[260px] py-24" id="methodology">
+          <div className="mx-auto grid max-w-[1400px] gap-[96px] px-[24px] lg:grid-cols-[1.05fr_1fr]">
             <div className="space-y-6">
               <div className="flex items-center gap-3 font-mono text-[12px] uppercase tracking-[1.2px] text-spring-green">
                 <span className="h-px w-8 bg-spring-green" />
@@ -469,33 +496,46 @@ export default function App() {
           </div>
         </section>
 
-        <section className="bg-deep-forest py-24">
-          <div className="mx-auto max-w-[1280px] px-6">
-            <div className="flex flex-wrap items-center gap-3 border-b border-spring-green/40 pb-6">
-              <h3 className="font-mono text-xl uppercase tracking-[1.4px] text-spring-green-60">Live sourcing feed</h3>
+        <section className="bg-[#0c2218] px-[320px] py-[96px]">
+          <div className="mx-auto flex max-w-[1280px] flex-col gap-12 px-[24px]">
+            <div className="flex items-center gap-3 border-b border-[#047857] pb-[17px]">
+              <h3 className="font-mono text-[32px] uppercase leading-[20px] tracking-[1.4px] text-[#7edcb0]">
+                Live sourcing feed
+              </h3>
               <span className="h-4 w-4 rounded-full bg-spring-green" />
-              <span className="ml-auto font-mono text-sm uppercase tracking-[0.8px] text-spring-green-60">3 new in the last hour</span>
+              <span className="ml-auto font-mono text-[16px] uppercase leading-[16px] text-[#7a9e8c]">3 new in the last hour</span>
             </div>
-            <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            <div className="grid gap-6 lg:grid-cols-2">
               {feedCards.map((card) => (
-                <div key={card.title} className="relative rounded-[8px] border border-pine-700 bg-[#0c2218] p-6">
-                  <div className="flex items-center justify-between text-xs font-mono uppercase tracking-[1px] text-spring-green-60">
+                <div key={card.title} className="relative h-[222.5px] rounded-[8px] border border-[#1e5c3e] bg-[#0c2218] px-[24px] pb-[24px] pt-[23.75px]">
+                  <div className="flex items-center justify-between text-[11px] font-mono uppercase leading-[16.5px] text-[#7a9e8c]">
                     <span>{card.tag}</span>
-                    <span className="text-spring-green">{card.status}</span>
+                    <span className={card.status.includes('New') ? 'text-spring-green' : 'text-[#7a9e8c]'}>{card.status}</span>
                   </div>
-                  <h4 className="mt-4 font-serif text-lg text-white">{card.title}</h4>
-                  <p className="mt-2 text-sm text-spring-green-60">{card.meta}</p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {card.tags.map((tag) => (
-                      <span key={tag} className="rounded-[4px] bg-gable-green px-2 py-1 text-[10px] font-mono uppercase tracking-[0.25px] text-ice-cold">
-                        {tag}
+                  <h4 className="mt-[12px] font-serif text-[20px] font-medium leading-[28px] text-[#f1f5f9]">
+                    {card.title}
+                  </h4>
+                  <p className="mt-[8px] font-display text-[14px] leading-[20px] text-[#7a9e8c]">{card.meta}</p>
+                  <div className="mt-[12px] flex flex-wrap gap-2">
+                    {card.tags.map((tag: FeedTag) => (
+                      <span
+                        key={tag.label}
+                        className={`rounded-[4px] px-[8px] py-[4px] text-[10px] font-mono uppercase leading-[15px] tracking-[0.25px] ${
+                          tag.variant === 'amber'
+                            ? 'bg-[rgba(246,239,166,0.3)] text-amber-signal'
+                            : 'bg-[#14392a] text-[#b8f5d8]'
+                        } ${tag.minWidth ?? ''}`}
+                      >
+                        {tag.label}
                       </span>
                     ))}
                   </div>
-                  <div className="mt-5 flex items-center gap-2 border-t border-gable-green pt-3 text-[10px] font-mono uppercase tracking-[0.25px] text-cyan-signal">
-                    <img src={card.matchIcon} alt="" aria-hidden="true" className="h-3 w-3" />
-                    {card.matches}
-                  </div>
+                  {card.matches && (
+                    <div className="mt-[12px] flex items-center gap-2 border-t border-[#14392a] pt-[13px] text-[10px] font-mono uppercase leading-[15px] tracking-[0.25px] text-[#13ecec]">
+                      <img src={card.matchIcon} alt="" aria-hidden="true" className="h-4 w-[14px]" />
+                      {card.matches}
+                    </div>
+                  )}
                   <span className={`absolute left-0 top-0 h-full w-[2px] ${card.accent}`} />
                 </div>
               ))}
@@ -503,8 +543,8 @@ export default function App() {
           </div>
         </section>
 
-        <section className="border-t border-white/5 bg-[#060a08] pb-[80px] pt-[81px]">
-          <div className="mx-auto max-w-[1280px] px-6 text-center">
+        <section className="border-t border-white/5 bg-[#060a08] px-[260px] pb-[80px] pt-[81px]">
+          <div className="mx-auto max-w-[1280px] px-[24px] text-center">
             <h2 className="font-serif text-[60px] leading-[40px] text-white">
               Your sourcing logic. <span className="font-serif italic text-spring-green">Automatically.</span>
             </h2>
@@ -550,87 +590,95 @@ export default function App() {
           </div>
         </section>
 
-        <section className="relative overflow-hidden py-[120px]" id="pricing">
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, #060a08 0%, #0c2218 100%)' }} />
-          <div className="relative mx-auto max-w-[1280px] px-6 text-center">
-            <h2 className="font-serif text-[42px] leading-[40px] text-white">Access the Terminal</h2>
-            <p className="mt-4 text-[15px] leading-[24px] text-[#94a3b8]">
-              Start with intelligence. Scale to enterprise-grade diligence.
-            </p>
-            <div className="mt-16 grid gap-8 lg:grid-cols-3">
-              {pricingTiers.map((tier) => (
-                <div
-                  key={tier.name}
-                  className={`relative flex h-full flex-col rounded-[8px] border px-[33px] py-[32px] text-left ${
-                    tier.highlight
-                      ? 'border-[rgba(61,184,124,0.4)] bg-[#142921] shadow-[0px_0px_20px_rgba(61,184,124,0.25)]'
-                      : 'border-white/5 bg-[#0c2218]'
-                  }`}
-                >
-                  {tier.highlight && (
-                    <span className="absolute -top-5 left-1/2 -translate-x-1/2 rounded-full bg-spring-green px-5 py-1 text-[12px] font-bold uppercase tracking-[0.6px] text-[#060a08]">
-                      Most Popular
-                    </span>
-                  )}
-                  <div>
-                    <h3 className="font-display text-[20px] font-bold text-white">{tier.name}</h3>
-                    <p className="mt-4 text-[13px] leading-[20px] text-[#94a3b8]">{tier.blurb}</p>
-                    <div className="mt-5 flex items-baseline gap-3">
-                      <span className="font-mono text-[32px] leading-[36px] text-white">{tier.price}</span>
-                      <span className="text-[13px] text-[#64748b]">{tier.suffix}</span>
+        <section className="bg-gradient-to-b from-[#060a08] to-[#0c2218] py-[96px]" id="pricing">
+          <div className="mx-auto max-w-[1280px] px-6">
+            <div className="text-center">
+              <h2 className="font-serif text-[42px] leading-[40px] text-white">Access the Terminal</h2>
+              <p className="mx-auto mt-4 max-w-[576px] text-[14.8px] leading-[24px] text-slate-400">
+                Start with intelligence. Scale to enterprise-grade diligence.
+              </p>
+            </div>
+            <div className="mt-12 grid gap-8 lg:grid-cols-3">
+              {pricingTiers.map((tier) => {
+                const isAnalyst = tier.variant === 'analyst'
+                const isEnterprise = tier.variant === 'enterprise'
+                return (
+                  <div
+                    key={tier.name}
+                    className={`relative flex min-h-[436px] flex-col rounded-[8px] border p-[33px] text-left ${
+                      isAnalyst
+                        ? 'border-[rgba(61,184,124,0.4)] bg-[#142921] shadow-[0px_0px_20px_0px_rgba(61,184,124,0.25)] lg:-mt-3'
+                        : isEnterprise
+                          ? 'border-[rgba(19,236,236,0.2)] bg-[#060a08]'
+                          : 'border-white/5 bg-[#0c2218]'
+                    } ${isAnalyst ? 'min-h-[456px]' : ''}`}
+                  >
+                    {tier.highlight && (
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-spring-green px-3 py-[4px] text-[12px] font-bold uppercase tracking-[0.63px] text-[#060a08]">
+                        Most Popular
+                      </span>
+                    )}
+                    <div className="flex items-center gap-2">
+                      <h3 className="font-display text-[20px] font-bold leading-[28px] text-white">{tier.name}</h3>
+                      {tier.badgeIcon && <img src={tier.badgeIcon} alt="" aria-hidden="true" className="h-4 w-[14px]" />}
                     </div>
-                  </div>
-                  <ul className="mt-8 space-y-4 text-[14px] text-[#cbd5e1]">
-                    {tier.features.map((feature) => (
-                      <li key={feature.label} className="flex items-center gap-3">
-                        <img src={feature.icon} alt="" aria-hidden="true" className="h-4 w-4" />
-                        {feature.label}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-auto">
+                    <p className="mt-4 text-[13.5px] leading-[20px] text-slate-400">{tier.blurb}</p>
+                    <div className="mt-6 flex items-end gap-2 font-mono text-white">
+                      <span className="text-[30px] leading-[36px]">{tier.price}</span>
+                      {tier.suffix && <span className="text-[12.8px] leading-[20px] text-slate-500">{tier.suffix}</span>}
+                    </div>
+                    <ul className="mt-6 space-y-4 text-[13.5px] leading-[20px] text-[#cbd5e1]">
+                      {tier.features.map((feature) => (
+                        <li
+                          key={feature.label}
+                          className={`flex items-center gap-3 ${isAnalyst ? 'text-[#e2e8f0]' : 'text-[#cbd5e1]'}`}
+                        >
+                          <img src={feature.icon} alt="" aria-hidden="true" className="h-[10px] w-[10px]" />
+                          {feature.label}
+                        </li>
+                      ))}
+                    </ul>
                     <button
-                      className={`mt-8 w-full rounded-[6px] px-5 py-[13px] text-[15px] font-semibold ${
-                        tier.highlight
-                          ? 'bg-spring-green text-[#060a08]'
+                      className={`mt-auto w-full rounded-[6px] px-5 py-[12px] text-center text-[15px] leading-[24px] ${
+                        isAnalyst
+                          ? 'bg-spring-green font-bold text-[#060a08]'
                           : 'border border-white/20 text-white'
                       }`}
                     >
                       {tier.cta}
                     </button>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </div>
         </section>
 
-        <section className="relative overflow-hidden bg-[#091410] px-6 py-16">
+        <section className="relative overflow-hidden bg-[#091410] py-[48px]">
           <div
             className="pointer-events-none absolute inset-0"
-            style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.5) 0%, #0c2218 70%)' }}
+            style={{ background: 'linear-gradient(0deg, rgba(0,0,0,0.5) 50.115%, #0c2218 66.641%)' }}
           />
-          <div
-            className="pointer-events-none absolute left-0 right-0 top-0 h-px"
-            style={{
-              background: 'linear-gradient(90deg, rgba(61,184,124,0) 0%, rgba(61,184,124,0.3) 50%, rgba(61,184,124,0) 100%)',
-            }}
-          />
-          <div className="relative mx-auto flex max-w-[768px] flex-col items-center gap-12 text-center">
+          <div className="pointer-events-none absolute left-0 right-0 top-0 h-px bg-[linear-gradient(90deg,rgba(61,184,124,0)_0%,rgba(61,184,124,0.3)_50%,rgba(61,184,124,0)_100%)]" />
+          <div className="relative mx-auto flex max-w-[768px] flex-col items-center gap-12 px-6 text-center">
             <h2 className="font-serif text-[60px] leading-[60px] text-white">
               Join 850+ investors already moving
               <br />
               capital through the Valley of Death.
             </h2>
-            <form className="flex w-full flex-col gap-4 sm:flex-row" onSubmit={(event) => event.preventDefault()}>
-              <input
-                className="flex-1 rounded-[4px] border border-[#2a4d40] bg-[#0c2218] px-4 py-[14px] font-mono text-[14px] text-white placeholder-[#6b7280]"
-                placeholder="findfoak@gmail.com"
-              />
-              <button className="rounded-[4px] border border-[rgba(61,184,124,0.1)] bg-[#1f3a2f] px-8 py-[14px] font-display text-[14px] font-medium text-spring-green">
-                Request Access
-              </button>
-            </form>
+            <div className="flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
+              <div className="flex w-full max-w-[396px] rounded-[2px] border border-[rgba(61,184,124,0.1)] bg-[#0f1612] p-px shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
+                <input
+                  className="w-full rounded-[4px] border border-[#2a4d40] bg-[#0c2218] px-[13px] py-[10px] font-mono text-[14px] text-[#6b7280] outline-none"
+                  defaultValue="findfoak@gmail.com"
+                />
+              </div>
+              <div className="flex w-full max-w-[325px] rounded-[2px] border border-[rgba(61,184,124,0.1)] bg-[#0f1612] p-px shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
+                <button className="w-full rounded-[4px] bg-[#1f3a2f] py-[8px] font-display text-[14px] font-medium leading-[20px] text-spring-green">
+                  Request Access
+                </button>
+              </div>
+            </div>
           </div>
         </section>
       </main>
