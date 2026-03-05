@@ -451,7 +451,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="bg-black px-[260px] py-24" id="methodology">
+        <section className="bg-black px-[200px] py-24" id="methodology">
           <div className="mx-auto grid max-w-[1400px] gap-[96px] px-[24px] lg:grid-cols-[1.05fr_1fr]">
             <div className="space-y-6">
               <div className="flex items-center gap-3 font-mono text-[12px] uppercase tracking-[1.2px] text-spring-green">
@@ -543,7 +543,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="border-t border-white/5 bg-[#060a08] px-[260px] pb-[80px] pt-[81px]">
+        <section className="border-t border-white/5 bg-[#060a08] px-[200px] pb-[80px] pt-[81px]">
           <div className="mx-auto max-w-[1280px] px-[24px] text-center">
             <h2 className="font-serif text-[60px] leading-[40px] text-white">
               Your sourcing logic. <span className="font-serif italic text-spring-green">Automatically.</span>
