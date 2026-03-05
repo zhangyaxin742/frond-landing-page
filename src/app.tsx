@@ -451,8 +451,8 @@ export default function App() {
           </div>
         </section>
 
-        <section className="bg-black px-[200px] py-24" id="methodology">
-          <div className="mx-auto grid max-w-[1400px] gap-[96px] px-[24px] lg:grid-cols-[1.05fr_1fr]">
+        <section className="bg-black py-24" id="methodology">
+          <div className="mx-auto grid max-w-[1400px] gap-[96px] px-6 lg:grid-cols-[1.05fr_1fr]">
             <div className="space-y-6">
               <div className="flex items-center gap-3 font-mono text-[12px] uppercase tracking-[1.2px] text-spring-green">
                 <span className="h-px w-8 bg-spring-green" />
@@ -496,8 +496,8 @@ export default function App() {
           </div>
         </section>
 
-        <section className="bg-[#0c2218] px-[320px] py-[96px]">
-          <div className="mx-auto flex max-w-[1280px] flex-col gap-12 px-[24px]">
+        <section className="bg-[#0c2218] py-[96px]">
+          <div className="mx-auto flex max-w-[1280px] flex-col gap-12 px-6">
             <div className="flex items-center gap-3 border-b border-[#047857] pb-[17px]">
               <h3 className="font-mono text-[32px] uppercase leading-[20px] tracking-[1.4px] text-[#7edcb0]">
                 Live sourcing feed
@@ -543,8 +543,8 @@ export default function App() {
           </div>
         </section>
 
-        <section className="border-t border-white/5 bg-[#060a08] px-[200px] pb-[80px] pt-[81px]">
-          <div className="mx-auto max-w-[1280px] px-[24px] text-center">
+        <section className="border-t border-white/5 bg-[#060a08] pb-[80px] pt-[81px]">
+          <div className="mx-auto max-w-[1280px] px-6 text-center">
             <h2 className="font-serif text-[60px] leading-[40px] text-white">
               Your sourcing logic. <span className="font-serif italic text-spring-green">Automatically.</span>
             </h2>
@@ -660,21 +660,24 @@ export default function App() {
             style={{ background: 'linear-gradient(0deg, rgba(0,0,0,0.5) 50.115%, #0c2218 66.641%)' }}
           />
           <div className="pointer-events-none absolute left-0 right-0 top-0 h-px bg-[linear-gradient(90deg,rgba(61,184,124,0)_0%,rgba(61,184,124,0.3)_50%,rgba(61,184,124,0)_100%)]" />
-          <div className="relative mx-auto flex max-w-[768px] flex-col items-center gap-12 px-6 text-center">
-            <h2 className="font-serif text-[60px] leading-[60px] text-white">
-              Join 850+ investors already moving
-              <br />
-              capital through the Valley of Death.
-            </h2>
-            <div className="flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
-              <div className="flex w-full max-w-[396px] rounded-[2px] border border-[rgba(61,184,124,0.1)] bg-[#0f1612] p-px shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
-                <input
-                  className="w-full rounded-[4px] border border-[#2a4d40] bg-[#0c2218] px-[13px] py-[10px] font-mono text-[14px] text-[#6b7280] outline-none"
-                  defaultValue="findfoak@gmail.com"
-                />
+          <div className="relative mx-auto flex w-full max-w-[768px] flex-col items-start gap-[48px] px-6">
+            <div className="flex w-full flex-col items-center">
+              <h2 className="font-serif text-[60px] leading-[60px] text-white text-center whitespace-pre">
+                <span className="block">Join 850+ investors already moving</span>
+                <span className="block"> capital through the Valley of Death.</span>
+              </h2>
+            </div>
+            <div className="flex w-full items-start justify-center pr-[44px]">
+              <div className="mr-[-44px] flex h-[39px] w-[396px] flex-col rounded-[2px] border border-[rgba(61,184,124,0.1)] bg-[#0f1612] p-px shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
+                <div className="w-[324px] rounded-[4px] border border-[#2a4d40] bg-[#0c2218] px-[13px] py-[10px]">
+                  <input
+                    className="w-full bg-transparent font-mono text-[14px] leading-[normal] text-[#6b7280] outline-none"
+                    defaultValue="findfoak@gmail.com"
+                  />
+                </div>
               </div>
-              <div className="flex w-full max-w-[325px] rounded-[2px] border border-[rgba(61,184,124,0.1)] bg-[#0f1612] p-px shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
-                <button className="w-full rounded-[4px] bg-[#1f3a2f] py-[8px] font-display text-[14px] font-medium leading-[20px] text-spring-green">
+              <div className="mr-[-44px] flex h-[37px] w-[325px] flex-col rounded-[2px] border border-[rgba(61,184,124,0.1)] bg-[#0f1612] p-px shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
+                <button className="flex w-full items-center justify-center rounded-[4px] bg-[#1f3a2f] py-[8px] font-display text-[14px] font-medium leading-[20px] text-spring-green">
                   Request Access
                 </button>
               </div>
