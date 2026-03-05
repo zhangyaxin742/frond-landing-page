@@ -185,8 +185,9 @@ export default function App() {
               <div className="node-519">
                 <p className="text-520">
                   <span className="text-white">The intelligence layer<br />between </span>
-                  <span className="text-rgb-61-184-124 italic">breakthrough science<br /></span>
-                  <span className="text-white">and the capital it deserves.</span>
+                  <span className="text-rgb-61-184-124 italic">breakthrough science</span>
+                  <span className="text-white"> and </span>
+                  <span className="text-white">the capital it deserves.</span>
                 </p>
               </div>
               <div className="node-521">
@@ -207,11 +208,7 @@ export default function App() {
                   className="variant-1-hover-false"
                   style={{ border: '1px solid rgba(255, 255, 255, 1)', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', padding: '12px 20px', borderRadius: '4px', width: 'auto', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
                 >
-                  <span className="variant-130-hover-false">
-                    <span className="variant-18">
-                      <img src={playIcon} className="vector-529" alt="" aria-hidden="true" />
-                    </span>
-                  </span>
+                  <img src={playIcon} className="vector-529" alt="" aria-hidden="true" />
                   <span className="text-530">See how it works</span>
                 </button>
               </div>
