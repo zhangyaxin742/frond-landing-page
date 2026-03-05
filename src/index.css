@@ -6943,6 +6943,8 @@ a.prototype-link {
   position: relative;
   min-height: 100svh;
   display: grid;
+  align-items: center;
+  justify-items: center;
   padding: var(--space-16) 2.5rem var(--space-12);
   overflow: hidden;
 }
@@ -6951,6 +6953,11 @@ a.prototype-link {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-6);
 }
 
 .hero-headline {
@@ -7027,19 +7034,13 @@ a.prototype-link {
 
 @media (min-width: 1280px) {
   .hero-inner {
-    display: grid;
-    grid-template-columns: 55fr 45fr;
-    align-items: center;
-    gap: 4rem;
+    display: flex;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
   .hero-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 2rem;
+    display: flex;
   }
 }
 

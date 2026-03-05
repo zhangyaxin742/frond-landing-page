@@ -280,8 +280,8 @@ export default function App() {
                 'radial-gradient(120.85% 178.96% at 50% 0%, rgba(60, 185, 124, 0.15) 24.038%, rgba(30, 93, 62, 0.325) 44.952%, rgba(15, 46, 31, 0.4125) 55.409%, rgba(8, 23, 16, 0.45625) 60.637%, rgba(0, 0, 0, 0.5) 65.866%)',
             }}
           />
-          <div className="headline-517 hero-inner relative">
-            <div className="div-relative-518">
+          <div className="hero-inner relative flex flex-col items-center text-center px-6 md:px-10">
+            <div className="max-w-4xl space-y-6">
               <div className="node-519">
                 <p className="text-520 hero-headline anim-fade-up">
                   <span className="hero-line text-white">The intelligence layer</span>
@@ -299,7 +299,7 @@ export default function App() {
                   </span>
                 </p>
               </div>
-              <div className="div-flex-523 hero-cta-group anim-stagger">
+              <div className="div-flex-523 hero-cta-group anim-stagger justify-center">
                 <button
                   className="variant-1-hover-false"
                   style={{ backgroundColor: 'rgba(60, 185, 124, 1)', height: '48px', minWidth: '200px', padding: '11.5px 32px 12.5px', borderRadius: '4px', width: 'auto', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', flexDirection: 'row', flexShrink: 0 }}
