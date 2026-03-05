@@ -202,16 +202,16 @@ export default function App() {
               <div className="div-flex-523">
                 <button
                   className="variant-1-hover-false"
-                  style={{ backgroundColor: 'rgba(60, 185, 124, 1)', padding: '10px 16px', borderRadius: '4px', width: 'auto', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
+                  style={{ backgroundColor: 'rgba(60, 185, 124, 1)', height: '48px', minWidth: '200px', padding: '11.5px 32px 12.5px', borderRadius: '4px', width: 'auto', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', flexDirection: 'row', flexShrink: 0 }}
                 >
                   <span className="syne-bold text-rgb-15-22-18">Access the database →</span>
                 </button>
                 <button
                   className="variant-1-hover-false"
-                  style={{ border: '1px solid rgba(255, 255, 255, 1)', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', padding: '10px 12px', borderRadius: '4px', width: 'auto', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+                  style={{ border: '1px solid rgba(255, 255, 255, 1)', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', height: '48px', width: '214px', padding: '11px 25px', borderRadius: '2px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', flexDirection: 'row', flexShrink: 0 }}
                 >
-                  <img src={playIcon} className="vector-529 h-4 w-4 flex-shrink-0" alt="" aria-hidden="true" />
-                  <span className="text-530">See how it works</span>
+                  <img src={playIcon} className="vector-529 flex-shrink-0" style={{ width: '24px', height: '28px' }} alt="" aria-hidden="true" />
+                  <span className="text-530" style={{ whiteSpace: 'nowrap' }}>See how it works</span>
                 </button>
               </div>
             </div>
