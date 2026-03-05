@@ -152,22 +152,41 @@ export default function App() {
       </header>
 
       <main className="pt-16">
-        <section className="relative overflow-hidden bg-racing-green pb-24 pt-28">
-          <div className="pointer-events-none absolute left-1/2 top-10 h-[820px] w-[820px] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(61,184,124,0.4),rgba(15,22,18,0))] blur-[60px]" />
-          <div className="mx-auto max-w-[1024px] px-6 text-center">
-            <h1 className="font-serif text-4xl font-medium leading-tight text-white md:text-6xl xl:text-[72px] xl:leading-[88px]">
-              The intelligence layer between{' '}
-              <span className="text-spring-green italic">breakthrough</span> science and the capital it deserves.
+        <section className="relative overflow-hidden bg-racing-green pb-20 pt-28">
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{ background: 'radial-gradient(164.64% 62.94% at 50% 0%, rgba(60, 185, 124, 0.15) 24.04%, rgba(0, 0, 0, 0.50) 65.87%)' }}
+          />
+          <div className="relative mx-auto max-w-[1024px] px-6 text-center">
+            <h1
+              className="font-serif italic font-light text-white"
+              style={{ fontSize: 'clamp(48px, 8vw, 120px)', lineHeight: '0.8', letterSpacing: '-2.4px' }}
+            >
+              <span className="text-white">The intelligence layer{'\n'}between </span>
+              <span style={{ color: 'rgba(61, 184, 124, 0.9)' }}>breakthrough science{'\n'}</span>
+              <span className="text-white">and the capital it deserves.</span>
             </h1>
-            <p className="mt-6 text-base text-slate-300 md:text-lg">
+            <p
+              className="mx-auto mt-10 max-w-[748px] text-center font-sans"
+              style={{ color: '#94A3B8', fontSize: '24px', fontWeight: 400, lineHeight: '1', letterSpacing: '-0.576px' }}
+            >
               Frond monitors ARPA-E grants, SBIR awards, and 1,400+ other federal databases so you — and only you — invest first.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <button className="rounded-[4px] bg-spring-green px-6 py-3 font-display text-sm font-bold text-racing-green">
+              <button
+                className="font-display font-bold text-racing-green"
+                style={{ height: '48px', minWidth: '200px', padding: '11.5px 32px 12.5px', borderRadius: '4px', background: '#3CB97C', fontSize: '16px', lineHeight: '24px', letterSpacing: '0.4px' }}
+              >
                 Access the database →
               </button>
-              <button className="rounded-[4px] border border-slate-500 px-6 py-3 text-sm font-semibold text-slate-200">
-                See live demo
+              <button
+                className="flex items-center gap-2 font-display font-medium text-white"
+                style={{ width: '214px', height: '48px', padding: '10px 24px', borderRadius: '2px', border: '1px solid #FFF', boxShadow: '0 4px 4px 0 rgba(0,0,0,0.25)', fontSize: '16px', lineHeight: '24px' }}
+              >
+                <svg width="25" height="28" viewBox="0 0 25 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M9.57945 18.3749L16.385 13.9999L9.57945 9.62495V18.3749ZM12.01 23.7222C10.6651 23.7222 9.40121 23.467 8.21834 22.9565C7.03547 22.4461 6.00653 21.7534 5.13153 20.8784C4.25653 20.0034 3.56382 18.9745 3.05341 17.7916C2.54299 16.6087 2.28778 15.3449 2.28778 13.9999C2.28778 12.655 2.54299 11.3911 3.05341 10.2083C3.56382 9.02541 4.25653 7.99647 5.13153 7.12147C6.00653 6.24647 7.03547 5.55376 8.21834 5.04335C9.40121 4.53293 10.6651 4.27772 12.01 4.27772C13.3549 4.27772 14.6188 4.53293 15.8017 5.04335C16.9845 5.55376 18.0135 6.24647 18.8885 7.12147C19.7635 7.99647 20.4562 9.02541 20.9666 10.2083C21.477 11.3911 21.7322 12.655 21.7322 13.9999C21.7322 15.3449 21.477 16.6087 20.9666 17.7916C20.4562 18.9745 19.7635 20.0034 18.8885 20.8784C18.0135 21.7534 16.9845 22.4461 15.8017 22.9565C14.6188 23.467 13.3549 23.7222 12.01 23.7222ZM12.01 21.7777C14.1813 21.7777 16.0204 21.0243 17.5274 19.5173C19.0343 18.0104 19.7878 16.1712 19.7878 13.9999C19.7878 11.8286 19.0343 9.98953 17.5274 8.48258C16.0204 6.97564 14.1813 6.22217 12.01 6.22217C9.83871 6.22217 7.99959 6.97564 6.49264 8.48258C4.9857 9.98953 4.23223 11.8286 4.23223 13.9999C4.23223 16.1712 4.9857 18.0104 6.49264 19.5173C7.99959 21.0243 9.83871 21.7777 12.01 21.7777Z" fill="white"/>
+                </svg>
+                See how it works
               </button>
             </div>
           </div>
