@@ -178,16 +178,18 @@ export default function App() {
         <section className="hero-section-515 relative overflow-hidden bg-racing-green">
           <div
             className="node-516 pointer-events-none absolute inset-0"
-            style={{ background: 'radial-gradient(164.64% 62.94% at 50% 0%, rgba(60, 185, 124, 0.15) 24.04%, rgba(0, 0, 0, 0.50) 65.87%)' }}
+            style={{ background: 'radial-gradient(164.64% 62.94% at 50% 20%, rgba(60, 185, 124, 0.15) 24.04%, rgba(0, 0, 0, 0.50) 65.87%)' }}
           />
           <div className="headline-517 relative">
             <div className="div-relative-518">
               <div className="node-519">
                 <p className="text-520">
-                  <span className="text-white">The intelligence layer<br />between </span>
+                  <span className="text-white">The intelligence layer</span>
+                  <br />
+                  <span className="text-white">between </span>
                   <span className="text-rgb-61-184-124 italic">breakthrough science</span>
-                  <span className="text-white"> and </span>
-                  <span className="text-white">the capital it deserves.</span>
+                  <br />
+                  <span className="text-white">and the capital it deserves.</span>
                 </p>
               </div>
               <div className="node-521">
@@ -200,13 +202,13 @@ export default function App() {
               <div className="div-flex-523">
                 <button
                   className="variant-1-hover-false"
-                  style={{ backgroundColor: 'rgba(60, 185, 124, 1)', padding: '12px 24px', borderRadius: '4px', width: 'auto', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
+                  style={{ backgroundColor: 'rgba(60, 185, 124, 1)', padding: '12px 20px', borderRadius: '4px', width: 'auto', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
                 >
                   <span className="syne-bold text-rgb-15-22-18">Access the database →</span>
                 </button>
                 <button
                   className="variant-1-hover-false"
-                  style={{ border: '1px solid rgba(255, 255, 255, 1)', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', padding: '12px 20px', borderRadius: '4px', width: 'auto', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+                  style={{ border: '1px solid rgba(255, 255, 255, 1)', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', padding: '12px 16px', borderRadius: '4px', width: 'auto', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
                 >
                   <img src={playIcon} className="vector-529" alt="" aria-hidden="true" />
                   <span className="text-530">See how it works</span>
