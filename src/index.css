@@ -5867,25 +5867,25 @@ a.prototype-link {
   text-align: center;
   font-family: var(--font-family-cormorant-garamond);
   font-weight: 300;
-  font-size: 120px;
+  font-size: 96px;
   letter-spacing: -2.4000000953674316px;
-  line-height: 96px;
+  line-height: 80px;
   text-decoration: none;
   text-transform: none;
   color: var(--text-white);
   font-family: var(--font-family-cormorant-garamond);
   font-weight: 300;
-  font-size: 120px;
+  font-size: 96px;
   letter-spacing: -2.4000000953674316px;
-  line-height: 96px;
+  line-height: 80px;
   text-decoration: none;
   text-transform: none;
   color: var(--text-rgb-61-184-124);
   font-family: var(--font-family-cormorant-garamond);
   font-weight: 300;
-  font-size: 120px;
+  font-size: 96px;
   letter-spacing: -2.4000000953674316px;
-  line-height: 96px;
+  line-height: 80px;
   text-decoration: none;
   text-transform: none;
   color: var(--text-white);
@@ -5904,9 +5904,9 @@ a.prototype-link {
   text-align: center;
   font-family: var(--font-family-space-grotesk);
   font-weight: normal;
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: -2.4000000953674316%;
-  line-height: 24px;
+  line-height: 22px;
   text-decoration: none;
   text-transform: none;
   color: var(--text-rgb-148-163-184);
@@ -6006,11 +6006,11 @@ a.prototype-link {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   padding: 0px;
   flex-grow: 0;
   flex-shrink: 1;
-  width: 53.333333333333336%;
+  width: 100%;
   max-width: 1024px;
 }
 
@@ -6018,7 +6018,7 @@ a.prototype-link {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   padding: 361px 448px 80px 448px;
   flex-grow: 0;
   flex-shrink: 1;
