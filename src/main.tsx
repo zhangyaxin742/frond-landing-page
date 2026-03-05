@@ -1,5 +1,14 @@
-import { render } from 'preact'
+import React from 'react'
+import { createRoot } from 'react-dom/client'
 import './index.css'
-import { App } from './app.tsx'
+import App from './app'
 
-render(<App />, document.getElementById('app')!)
+const rootElement = document.getElementById('root')
+
+if (rootElement) {
+  createRoot(rootElement).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  )
+}
