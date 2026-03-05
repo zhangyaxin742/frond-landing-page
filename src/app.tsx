@@ -26,15 +26,7 @@ const marqueePrimary = [
   '166 BREAKOUT COMPANIES',
 ]
 
-const marqueeSecondary = [
-  'USPTO Y02 PATENTS',
-  'SBIR/STTR AWARDS',
-  '1,700+ ARPA-E PROJECTS',
-  '$13.5B+ CAPITAL GAP',
-  '850 ACTIVE INVESTORS',
-  '24/7 FOAK CLIMATE TECH MONITORING',
-  '166 BREAKOUT COMPANIES',
-]
+const marqueeSecondary = ['40,000+ PATENTS INDEXED', 'SBIR/STTR AWARDS API', 'DOE LOAN PROGRAMS']
 
 const feedCards = [
   {
@@ -178,7 +170,10 @@ export default function App() {
         <section className="hero-section-515 relative overflow-hidden bg-racing-green">
           <div
             className="node-516 pointer-events-none absolute inset-0"
-            style={{ background: 'radial-gradient(164.64% 62.94% at 50% 20%, rgba(60, 185, 124, 0.15) 24.04%, rgba(0, 0, 0, 0.50) 65.87%)' }}
+            style={{
+              background:
+                'radial-gradient(120.85% 178.96% at 50% 0%, rgba(60, 185, 124, 0.15) 24.038%, rgba(30, 93, 62, 0.325) 44.952%, rgba(15, 46, 31, 0.4125) 55.409%, rgba(8, 23, 16, 0.45625) 60.637%, rgba(0, 0, 0, 0.5) 65.866%)',
+            }}
           />
           <div className="headline-517 relative">
             <div className="div-relative-518">
@@ -218,14 +213,19 @@ export default function App() {
           </div>
         </section>
 
-        <section className="relative overflow-hidden border-y border-slate-700/50 bg-racing-green py-4">
-          <div className="flex animate-marquee items-center gap-12 whitespace-nowrap px-6 text-xs font-mono uppercase tracking-[1.4px] text-slate-500">
-            {[...marqueePrimary, ...marqueeSecondary].map((item, index) => (
-              <div key={`${item}-${index}`} className="flex items-center gap-3">
-                <span className="h-1.5 w-1.5 rounded-full bg-slate-700" />
-                {item}
-              </div>
-            ))}
+        <section
+          className="relative overflow-hidden border-y"
+          style={{ backgroundColor: 'rgba(15, 22, 18, 0.5)', borderTop: '1px solid rgba(255, 255, 255, 0.05)', borderBottom: '1px solid rgba(255, 255, 255, 0.05)' }}
+        >
+          <div className="relative py-[17px]">
+            <div className="flex animate-marquee items-center gap-12 whitespace-nowrap px-6">
+              {[...marqueePrimary, ...marqueeSecondary].map((item, index) => (
+                <div key={`${item}-${index}`} className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-slate-700" />
+                  <span className="font-mono text-[14px] uppercase leading-5 text-slate-500 tracking-normal">{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
           <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-racing-green to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-racing-green to-transparent" />
