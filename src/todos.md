@@ -1,8 +1,6 @@
 IMPORTANT 
-## SIZING is fucked on desktop and worse on mobile 
-## rework user flow for max efficiency -- table the trl component for now and prolly pricing 
 ## responsiveness behaviors - change color on hover, glassmorphics, animations etc 
-## build waitlist on one branch --> LAUNCH ASAP 
+## waitlist as a google form?
 
 PRETTY IMPORTANT
 ## build backend on the other - learn to separate gits 
