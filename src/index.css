@@ -5867,7 +5867,7 @@ a.prototype-link {
   text-align: center;
   font-family: var(--font-family-cormorant-garamond);
   font-weight: 300;
-  font-size: 96px;
+  font-size: 84px;
   letter-spacing: -2.4000000953674316px;
   line-height: 80px;
   text-decoration: none;
@@ -6019,7 +6019,7 @@ a.prototype-link {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 240px 224px 80px 224px;
+  padding: 240px 200px 80px 200px;
   flex-grow: 0;
   flex-shrink: 1;
   width: 100%;
