@@ -6004,7 +6004,7 @@ a.prototype-link {
 .hero-section-515 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   padding: 160px 200px 80px 200px;
   flex-grow: 0;
@@ -6942,8 +6942,11 @@ a.prototype-link {
 .hero {
   position: relative;
   min-height: 100svh;
-  display: grid;
-  padding: var(--space-16) 2.5rem var(--space-12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 160px 200px 80px 200px;
   overflow: hidden;
 }
 
@@ -6951,6 +6954,9 @@ a.prototype-link {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-headline {
@@ -6981,6 +6987,7 @@ a.prototype-link {
   gap: 1rem;
   margin-top: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .signal-card {
@@ -7027,19 +7034,17 @@ a.prototype-link {
 
 @media (min-width: 1280px) {
   .hero-inner {
-    display: grid;
-    grid-template-columns: 55fr 45fr;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 4rem;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
   .hero-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 2rem;
   }
 }
 
