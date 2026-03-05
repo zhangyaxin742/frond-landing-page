@@ -180,39 +180,39 @@ export default function App() {
             className="node-516 pointer-events-none absolute inset-0"
             style={{ background: 'radial-gradient(164.64% 62.94% at 50% 0%, rgba(60, 185, 124, 0.15) 24.04%, rgba(0, 0, 0, 0.50) 65.87%)' }}
           />
-          <div className="headline-517 relative">
+          <div className="headline-517 relative mx-auto max-w-[1024px] px-6 text-center">
             <div className="div-relative-518">
               <div className="node-519">
-                <p className="text-520">
-                  <span className="text-white">The intelligence layer<br />between </span>
-                  <span className="text-rgb-61-184-124">breakthrough science<br /></span>
+                <h1
+                  className="font-serif italic font-light text-white"
+                  style={{ fontSize: 'clamp(48px, 8vw, 120px)', lineHeight: '0.8', letterSpacing: '-2.4px' }}
+                >
+                  <span className="text-white">The intelligence layer{'\n'}between </span>
+                  <span style={{ color: 'rgba(61, 184, 124, 0.9)' }}>breakthrough science{'\n'}</span>
                   <span className="text-white">and the capital it deserves.</span>
-                </p>
+                </h1>
               </div>
               <div className="node-521">
-                <p className="text-522">
-                  <span className="text-rgb-148-163-184">
-                    Frond monitors ARPA-E grants, SBIR awards, and 1,400+ other federal databases so you — and only you — invest first.
-                  </span>
+                <p
+                  className="mx-auto mt-10 max-w-[748px] text-center font-sans"
+                  style={{ color: '#94A3B8', fontSize: '24px', fontWeight: 400, lineHeight: '1', letterSpacing: '-0.576px' }}
+                >
+                  Frond monitors ARPA-E grants, SBIR awards, and 1,400+ other federal databases so you — and only you — invest first.
                 </p>
               </div>
-              <div className="div-flex-523">
+              <div className="div-flex-523 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <button
-                  className="variant-1-hover-false"
-                  style={{ backgroundColor: 'rgba(60, 185, 124, 1)', padding: '12px 24px', borderRadius: '4px', width: 'auto', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
+                  className="font-display font-bold text-racing-green"
+                  style={{ height: '48px', minWidth: '200px', padding: '11.5px 32px 12.5px', borderRadius: '4px', background: '#3CB97C', fontSize: '16px', lineHeight: '24px', letterSpacing: '0.4px' }}
                 >
-                  <span className="syne-bold text-rgb-15-22-18">Access the database →</span>
+                  Access the database →
                 </button>
                 <button
-                  className="variant-1-hover-false"
-                  style={{ border: '1px solid rgba(255, 255, 255, 1)', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', padding: '12px 20px', borderRadius: '4px', width: 'auto', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+                  className="flex items-center gap-2 font-display font-medium text-white"
+                  style={{ width: '214px', height: '48px', padding: '10px 24px', borderRadius: '2px', border: '1px solid #FFF', boxShadow: '0 4px 4px 0 rgba(0,0,0,0.25)', fontSize: '16px', lineHeight: '24px' }}
                 >
-                  <span className="variant-130-hover-false">
-                    <span className="variant-18">
-                      <img src={playIcon} className="vector-529" alt="" aria-hidden="true" />
-                    </span>
-                  </span>
-                  <span className="text-530">See how it works</span>
+                  <img src={playIcon} alt="" aria-hidden="true" className="h-5 w-5" />
+                  See how it works
                 </button>
               </div>
             </div>
