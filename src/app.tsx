@@ -221,8 +221,8 @@ export default function App() {
 
         <section className="relative overflow-hidden border-y border-slate-700/50 bg-racing-green py-4">
           <div className="flex animate-marquee items-center gap-12 whitespace-nowrap px-6 text-xs font-mono uppercase tracking-[1.4px] text-slate-500">
-            {[...marqueePrimary, ...marqueeSecondary].map((item) => (
-              <div key={item} className="flex items-center gap-3">
+            {[...marqueePrimary, ...marqueeSecondary].map((item, index) => (
+              <div key={`${item}-${index}`} className="flex items-center gap-3">
                 <span className="h-1.5 w-1.5 rounded-full bg-slate-700" />
                 {item}
               </div>
