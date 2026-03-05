@@ -172,8 +172,9 @@ const pricingTiers = [
 const footerColumns = {
   Platform: ['Technologies', 'Matching Engine', 'API Docs', 'Pricing'],
   Company: ['About', 'Methodology', 'Careers', 'Contact'],
-  Legal: ['Privacy', 'Terms', 'Security'],
 }
+
+const footerLegal = ['Privacy', 'Terms', 'Security']
 
 const LogoMark = ({ className = '' }: { className?: string }) => (
   <img className={className} src={logoMark} alt="Frond logo" />
@@ -280,9 +281,9 @@ export default function App() {
               35% of emissions reductions needed by 2050 must come from technologies not yet commercially available. The window lies in the TRL (Technology Readiness Level) 6–8 range, and stagnates with zero infrastructure -- until now.
             </p>
 
-            <div className="mt-14 rounded-[12px] border border-[#1f3a2f] bg-transparent px-6 py-8 text-left">
+            <div className="mt-14 rounded-[12px] bg-transparent px-6 py-8 text-left">
               <div className="relative mx-auto h-[300px] w-full max-w-[1280px]">
-                <div className="absolute left-1/2 top-[110px] -translate-x-1/2 -translate-y-1/2 font-mono text-[12px] font-medium uppercase tracking-[0.6px] text-amber-signal">
+                <div className="absolute left-1/2 top-[84px] -translate-x-1/2 font-mono text-[12px] font-medium uppercase leading-[16px] tracking-[0.6px] text-amber-signal">
                   Valley of death
                 </div>
                 <div className="absolute left-[13.59%] top-[84px] flex flex-col items-center">
@@ -304,7 +305,7 @@ export default function App() {
                   </div>
                   <div className="h-[56px] w-px bg-[#475569]" />
                 </div>
-                <div className="absolute left-0 right-0 top-[123px] flex items-center justify-between px-2 font-mono text-[12px] uppercase tracking-[0.6px]">
+                <div className="absolute left-0 right-0 top-[84px] flex items-center justify-between px-2 font-mono text-[12px] uppercase leading-[16px] tracking-[0.6px]">
                   <span className="text-spring-green">Early Research</span>
                   <span className="text-white">Commercial Scale</span>
                 </div>
@@ -373,7 +374,7 @@ export default function App() {
                       <span className="absolute bottom-0 left-0 h-[4px] w-full bg-amber-signal" />
                     </div>
                     <div
-                      className="relative flex h-[143px] flex-col justify-between rounded-[2px] border p-[17px]"
+                      className="relative flex h-[143px] flex-col justify-between rounded-[2px] border p-[20px]"
                       style={{
                         backgroundColor: 'rgba(200,168,75,0.25)',
                         borderColor: 'rgba(200,168,75,0.3)',
@@ -393,7 +394,7 @@ export default function App() {
                       <span className="absolute bottom-0 left-0 h-[4px] w-full bg-amber-signal" />
                     </div>
                     <div
-                      className="relative flex h-[143px] flex-col justify-between rounded-[2px] border p-[17px]"
+                      className="relative flex h-[143px] flex-col justify-between rounded-[2px] border p-[20px]"
                       style={{
                         backgroundColor: 'rgba(200,168,75,0.25)',
                         borderColor: 'rgba(200,168,75,0.3)',
@@ -409,7 +410,7 @@ export default function App() {
                       <span className="absolute bottom-0 left-0 h-[4px] w-full bg-amber-signal" />
                     </div>
                     <div
-                      className="relative flex h-[143px] flex-col justify-between rounded-[2px] border p-[17px]"
+                      className="relative flex h-[143px] flex-col justify-between rounded-[2px] border p-[20px]"
                       style={{
                         backgroundColor: 'rgba(200,168,75,0.25)',
                         borderColor: 'rgba(200,168,75,0.3)',
@@ -548,10 +549,10 @@ export default function App() {
             <h2 className="font-serif text-[60px] leading-[40px] text-white">
               Your sourcing logic. <span className="font-serif italic text-spring-green">Automatically.</span>
             </h2>
-            <p className="mt-4 text-[18px] leading-[16px] text-[#cbd5e1]">
+            <p className="mt-8 text-[18px] leading-[16px] text-[#cbd5e1]">
               Frond parses thousands of technical documents against your specific investment thesis, alerting you only when the science matches your strategy.
             </p>
-            <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {pipelineSteps.map((step) => (
                 <div
                   key={step.title}
@@ -590,7 +591,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="bg-gradient-to-b from-[#060a08] to-[#0c2218] py-[96px]" id="pricing">
+        <section className="bg-gradient-to-b from-[#060a08] to-[#0c2218] pb-[96px] pt-[64px]" id="pricing">
           <div className="mx-auto max-w-[1280px] px-6">
             <div className="text-center">
               <h2 className="font-serif text-[42px] leading-[40px] text-white">Access the Terminal</h2>
@@ -686,32 +687,49 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="border-t border-spring-green/20 bg-[#060a08] py-16">
-        <div className="mx-auto max-w-[1280px] px-6">
-          <div className="grid gap-12 md:grid-cols-4">
-            <div className="space-y-6">
-              <div className="flex items-center gap-3">
+      <footer className="border-t border-[#1f3a2f] bg-[#060a08] pb-[28px] pt-[49px]">
+        <div className="mx-auto flex max-w-[1280px] flex-col gap-[48px] px-6">
+          <div className="flex flex-col gap-12 md:flex-row md:items-end md:justify-between">
+            <div className="flex flex-1 flex-col gap-[13px]">
+              <div className="flex items-center gap-[3px]">
                 <LogoMark className="h-6 w-6" />
-                <span className="font-display text-lg font-bold text-white">Frond</span>
+                <span className="font-display text-[20px] font-bold leading-[28px] tracking-[-0.5px] text-white">Frond</span>
               </div>
-              <p className="text-sm text-slate-500">Intelligent sourcing for First-of-a-Kind (FOAK) climate tech.</p>
-              <div className="flex gap-4 text-slate-400">
-                <img src={linkedInIcon} alt="LinkedIn" className="h-4 w-4" />
-                <img src={xIcon} alt="X" className="h-4 w-4" />
+              <p className="text-[14px] leading-[20px] text-slate-500">
+                Intelligent sourcing for First-of-a-Kind (FOAK) climate tech.
+              </p>
+              <div className="flex items-center gap-4 pt-2 text-slate-400">
+                <img src={linkedInIcon} alt="LinkedIn" className="h-5 w-5" />
+                <img src={xIcon} alt="X" className="h-5 w-5" />
               </div>
             </div>
             {Object.entries(footerColumns).map(([title, links]) => (
-              <div key={title} className="space-y-4">
-                <p className="font-mono text-xs uppercase tracking-[0.6px] text-slate-400">{title}</p>
-                <ul className="space-y-2 text-sm text-slate-300">
+              <div key={title} className="flex flex-1 flex-col gap-4">
+                <p className="font-mono text-[12px] uppercase tracking-[0.6px] text-slate-400">{title}</p>
+                <ul className="space-y-2 text-[14px] leading-[20px] text-slate-300">
                   {links.map((link) => (
                     <li key={link}>{link}</li>
                   ))}
                 </ul>
               </div>
             ))}
+            <div className="flex w-full max-w-[217px] flex-col gap-4 md:w-auto">
+              <p
+                className="text-[14px] font-semibold uppercase tracking-[0.7px] text-white"
+                style={{ fontFamily: 'Inter, sans-serif' }}
+              >
+                Legal
+              </p>
+              <ul className="space-y-2">
+                {footerLegal.map((link) => (
+                  <li key={link} className="text-[14px] leading-[20px] text-slate-400" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    {link}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div className="mt-12 flex flex-wrap items-center justify-between gap-6 border-t border-spring-green/20 pt-8 text-xs text-slate-500">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[#1f3a2f] pt-[33px] text-[12px] leading-[16px] text-[#475569]">
             <span>© 2026 Frond Inc. All rights reserved.</span>
             <div className="flex gap-4">
               <span>Privacy Policy</span>
