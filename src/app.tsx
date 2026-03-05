@@ -15,6 +15,7 @@ import enterpriseCheck3 from './assets/vector-151.svg'
 import enterpriseCheck4 from './assets/vector-156.svg'
 import matchIconPrimary from './assets/vector-293.svg'
 import matchIconSecondary from './assets/vector-346.svg'
+import trlMarkerIcon from './assets/vector-403.svg'
 
 const marqueePrimary = [
   'USPTO Y02 PATENTS',
@@ -27,8 +28,6 @@ const marqueePrimary = [
 ]
 
 const marqueeSecondary = ['40,000+ PATENTS INDEXED', 'SBIR/STTR AWARDS API', 'DOE LOAN PROGRAMS']
-
-const trlMarkerIcon = 'https://www.figma.com/api/mcp/asset/cc923146-e4d6-4108-93c5-d0c4401f5d05'
 
 const feedCards = [
   {
@@ -78,21 +77,26 @@ const pipelineSteps = [
     number: '01',
     title: 'Ingest',
     copy: 'Frond pulls from SBIR, ARPA-E, USPTO Y02 patents, NSF grants, and DOE lab databases daily. No manual curation, no human latency.',
+    progress: 0.25,
   },
   {
     number: '02',
     title: 'Resolve',
     copy: 'NLP links the same technology across disparate sources, connecting patent filings, grant awards, and lab partnerships into a single verified profile.',
+    progress: 0.5,
   },
   {
     number: '03',
     title: 'Score',
     copy: "Each technology is assigned a TRL score and commercialization signal. You see the deal's technical maturity before anyone else has begun to model it.",
+    progress: 0.73,
   },
   {
     number: '04',
     title: 'Match',
     copy: 'AI matches your portfolio gaps to the technologies most likely to fill them — proprietary sourcing, not recycled conference deal flow.',
+    progress: 1,
+    active: true,
   },
 ]
 
@@ -249,26 +253,26 @@ export default function App() {
               35% of emissions reductions needed by 2050 must come from technologies not yet commercially available. The window lies in the TRL (Technology Readiness Level) 6–8 range, and stagnates with zero infrastructure -- until now.
             </p>
 
-            <div className="mt-14 rounded-[12px] border border-[#1f3a2f] bg-[#0c2218] px-6 py-8 text-left">
+            <div className="mt-14 rounded-[12px] border border-[#1f3a2f] bg-transparent px-6 py-8 text-left">
               <div className="relative mx-auto h-[300px] w-full max-w-[1280px]">
-                <div className="absolute left-1/2 top-[110px] -translate-x-1/2 -translate-y-1/2 font-mono text-[12px] uppercase tracking-[0.6px] text-amber-signal">
+                <div className="absolute left-1/2 top-[110px] -translate-x-1/2 -translate-y-1/2 font-mono text-[12px] font-medium uppercase tracking-[0.6px] text-amber-signal">
                   Valley of death
                 </div>
                 <div className="absolute left-[13.59%] top-[84px] flex flex-col items-center">
-                  <div className="rounded-[4px] border border-[rgba(61,184,124,0.3)] bg-[#0c2218] px-[13px] py-[5px] text-[12px] font-mono text-spring-green">
+                  <div className="h-[26px] rounded-[4px] border border-[rgba(61,184,124,0.3)] bg-[#0c2218] px-[13px] py-[5px] text-[12px] font-mono leading-[16px] text-spring-green">
                     Lab Scale
                   </div>
-                  <div className="h-[30px] w-px bg-[rgba(61,184,124,0.3)]" />
+                  <div className="h-[29px] w-px bg-[rgba(61,184,124,0.3)]" />
                 </div>
                 <div className="absolute left-[60.31%] top-[72px] flex flex-col items-center">
-                  <div className="flex items-center gap-2 rounded-[4px] border border-amber-signal bg-[#2a2412] px-[13px] py-[5px] text-[12px] font-mono text-amber-signal shadow-[0px_0px_15px_rgba(200,168,75,0.3)]">
+                  <div className="flex h-[26px] items-center gap-2 rounded-[4px] border border-amber-signal bg-[#2a2412] px-[13px] py-[5px] text-[12px] font-mono leading-[16px] text-amber-signal shadow-[0px_0px_15px_rgba(200,168,75,0.3)]">
                     <img src={trlMarkerIcon} alt="" aria-hidden="true" className="h-[16px] w-[14px]" />
                     Fervo Energy (Pilot)
                   </div>
-                  <div className="h-[42px] w-px bg-amber-signal" />
+                  <div className="h-[41px] w-px bg-amber-signal" />
                 </div>
                 <div className="absolute left-[80.94%] top-[57px] flex flex-col items-center">
-                  <div className="rounded-[4px] border border-[#475569] bg-[#1e293b] px-[13px] py-[5px] text-[12px] font-mono text-white shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]">
+                  <div className="h-[26px] rounded-[4px] border border-[#475569] bg-[#1e293b] px-[13px] py-[5px] text-[12px] font-mono leading-[16px] text-white shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_4px_6px_-4px_rgba(0,0,0,0.1)]">
                     Climeworks Mammoth
                   </div>
                   <div className="h-[56px] w-px bg-[#475569]" />
@@ -284,7 +288,7 @@ export default function App() {
                       style={{ backgroundColor: 'rgba(61,184,124,0.15)', borderColor: 'rgba(4,120,87,0.1)' }}
                     >
                       <span className="text-[12px] font-mono uppercase tracking-[0.6px] text-spring-green">TRL 1</span>
-                      <span className="font-serif text-[18px] leading-[22.5px] text-white">
+                      <span className="font-serif text-[18px] font-bold leading-[22.5px] text-white">
                         Basic
                         <br />
                         Principles
@@ -300,7 +304,7 @@ export default function App() {
                       style={{ backgroundColor: 'rgba(61,184,124,0.15)', borderColor: 'rgba(4,120,87,0.1)' }}
                     >
                       <span className="text-[12px] font-mono uppercase tracking-[0.6px] text-spring-green">TRL 2</span>
-                      <span className="font-serif text-[18px] leading-[22.5px] text-white">Concept</span>
+                      <span className="font-serif text-[18px] font-bold leading-[22.5px] text-white">Concept</span>
                       <span className="font-display text-[12px] font-semibold leading-[16px] text-slate-400">
                         Technology
                         <br />
@@ -314,7 +318,7 @@ export default function App() {
                       style={{ backgroundColor: 'rgba(61,184,124,0.15)', borderColor: 'rgba(4,120,87,0.1)' }}
                     >
                       <span className="text-[12px] font-mono uppercase tracking-[0.6px] text-spring-green">TRL 3</span>
-                      <span className="font-serif text-[18px] leading-[22.5px] text-white">
+                      <span className="font-serif text-[18px] font-bold leading-[22.5px] text-white">
                         Proof of
                         <br />
                         Concept
@@ -337,7 +341,7 @@ export default function App() {
                         <span className="text-[12px] font-mono uppercase tracking-[0.6px] text-amber-signal">TRL 4</span>
                         <img src={trlMarkerIcon} alt="" aria-hidden="true" className="h-[16px] w-[14px]" />
                       </div>
-                      <span className="font-serif text-[18px] leading-[22.5px] text-white">Validation</span>
+                      <span className="font-serif text-[18px] font-bold leading-[22.5px] text-white">Validation</span>
                       <span className="font-display text-[12px] font-semibold leading-[16px] text-slate-400">Lab validation</span>
                       <span className="absolute bottom-0 left-0 h-[4px] w-full bg-amber-signal" />
                     </div>
@@ -353,7 +357,7 @@ export default function App() {
                         <span className="text-[12px] font-mono uppercase tracking-[0.6px] text-amber-signal">TRL 5</span>
                         <img src={trlMarkerIcon} alt="" aria-hidden="true" className="h-[16px] w-[14px]" />
                       </div>
-                      <span className="font-serif text-[18px] leading-[22.5px] text-white">Validation</span>
+                      <span className="font-serif text-[18px] font-bold leading-[22.5px] text-white">Validation</span>
                       <span className="font-display text-[12px] font-semibold leading-[16px] text-slate-400">
                         Relevant
                         <br />
@@ -373,7 +377,7 @@ export default function App() {
                         <span className="text-[12px] font-mono uppercase tracking-[0.6px] text-amber-signal">TRL 6</span>
                         <img src={trlMarkerIcon} alt="" aria-hidden="true" className="h-[16px] w-[14px]" />
                       </div>
-                      <span className="font-serif text-[18px] leading-[22.5px] text-white">Demonstration</span>
+                      <span className="font-serif text-[18px] font-bold leading-[22.5px] text-white">Demonstration</span>
                       <span className="font-display text-[12px] font-semibold leading-[16px] text-slate-400">Prototype demo</span>
                       <span className="absolute bottom-0 left-0 h-[4px] w-full bg-amber-signal" />
                     </div>
@@ -389,7 +393,7 @@ export default function App() {
                         <span className="text-[12px] font-mono uppercase tracking-[0.6px] text-amber-signal">TRL 7</span>
                         <img src={trlMarkerIcon} alt="" aria-hidden="true" className="h-[16px] w-[14px]" />
                       </div>
-                      <span className="font-serif text-[18px] leading-[22.5px] text-white">Demonstration</span>
+                      <span className="font-serif text-[18px] font-bold leading-[22.5px] text-white">Demonstration</span>
                       <span className="font-display text-[12px] font-semibold leading-[16px] text-slate-400">System prototype</span>
                       <span className="absolute bottom-0 left-0 h-[4px] w-full bg-amber-signal" />
                     </div>
@@ -398,7 +402,7 @@ export default function App() {
                       style={{ backgroundColor: 'rgba(100,116,139,0.2)', borderColor: 'rgba(255,255,255,0.1)' }}
                     >
                       <span className="text-[12px] font-mono uppercase tracking-[0.6px] text-slate-400">TRL 8</span>
-                      <span className="font-serif text-[18px] leading-[22.5px] text-white">Qualified</span>
+                      <span className="font-serif text-[18px] font-bold leading-[22.5px] text-white">Qualified</span>
                       <span className="font-display text-[12px] font-semibold leading-[16px] text-slate-400">System complete</span>
                     </div>
                     <div
@@ -406,7 +410,7 @@ export default function App() {
                       style={{ backgroundColor: 'rgba(100,116,139,0.2)', borderColor: 'rgba(255,255,255,0.1)' }}
                     >
                       <span className="text-[12px] font-mono uppercase tracking-[0.6px] text-slate-400">TRL 9</span>
-                      <span className="font-serif text-[18px] leading-[22.5px] text-white">Proven</span>
+                      <span className="font-serif text-[18px] font-bold leading-[22.5px] text-white">Proven</span>
                       <span className="font-display text-[12px] font-semibold leading-[16px] text-slate-400">
                         Actual system
                         <br />
@@ -421,38 +425,44 @@ export default function App() {
         </section>
 
         <section className="bg-black py-24" id="methodology">
-          <div className="mx-auto grid max-w-[1400px] gap-16 px-6 lg:grid-cols-[1.05fr_1fr]">
-            <div className="space-y-8">
-              <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[1.2px] text-spring-green">
+          <div className="mx-auto grid max-w-[1400px] gap-[96px] px-6 lg:grid-cols-[1.05fr_1fr]">
+            <div className="space-y-6">
+              <div className="flex items-center gap-3 font-mono text-[12px] uppercase tracking-[1.2px] text-spring-green">
                 <span className="h-px w-8 bg-spring-green" />
                 The Missing Middle
               </div>
-              <h2 className="font-serif text-4xl text-white md:text-5xl">
+              <h2 className="font-serif text-[52px] leading-[57.2px] text-white">
                 51% of climate VCs say FOAK is the hardest stage to finance.
               </h2>
-              <p className="font-serif text-4xl text-spring-green md:text-5xl">
+              <p className="font-serif text-[56px] leading-[57.2px] text-spring-green">
                 They’re still finding deals on LinkedIn spreadsheets.
               </p>
-              <p className="max-w-xl text-lg text-slate-200">
+              <p className="max-w-[578px] text-[18px] leading-[24px] text-white">
                 The next decade of clean energy infrastructure is already in a government database somewhere, filed and forgotten. Frond surfaces it — before it shows up in anyone else’s deal flow.
               </p>
             </div>
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="rounded-[6px] border border-white/30 bg-spring-green/25 p-8">
-                <p className="font-mono text-xs uppercase tracking-[1.2px] text-spring-green">Capital Gap</p>
-                <p className="mt-4 font-serif text-5xl text-white">$200B</p>
-                <p className="mt-4 text-sm text-[#9db9b9]">Estimated annual funding shortfall for FOAK climate projects by 2030. (IEA)</p>
+            <div className="flex flex-col gap-6 md:flex-row md:items-stretch">
+              <div className="flex h-full flex-1 flex-col rounded-[2px] border border-white/30 bg-[rgba(61,184,124,0.25)] p-[33px]">
+                <p className="font-mono text-[12px] uppercase tracking-[1.2px] text-spring-green">Capital Gap</p>
+                <p className="mt-4 font-serif text-[72px] font-light leading-[60px] text-white">$200B</p>
+                <p className="mt-4 text-[16px] leading-[24px] text-[#9db9b9]">
+                  Estimated annual funding shortfall for FOAK climate projects by 2030. (IEA)
+                </p>
               </div>
-              <div className="space-y-6">
-                <div className="rounded-[6px] border border-white/30 bg-white/10 p-6">
-                  <p className="font-mono text-xs uppercase tracking-[1.2px] text-spring-green">Funding Rate</p>
-                  <p className="mt-3 font-serif text-4xl text-white">&lt;3%</p>
-                  <p className="mt-3 text-sm text-slate-300">Of viable hard-tech climate startups successfully raise Series B.</p>
+              <div className="flex flex-1 flex-col gap-6">
+                <div className="rounded-[2px] border border-white/30 bg-[rgba(236,253,245,0.15)] p-[25px]">
+                  <p className="font-mono text-[12px] uppercase tracking-[1.2px] text-spring-green">Funding Rate</p>
+                  <p className="mt-3 font-serif text-[48px] leading-[56px] text-white">&lt;3%</p>
+                  <p className="mt-3 text-[16px] leading-[20px] text-slate-400">
+                    Of viable hard-tech climate startups successfully raise Series B.
+                  </p>
                 </div>
-                <div className="rounded-[6px] border border-white/30 bg-white/10 p-6">
-                  <p className="font-mono text-xs uppercase tracking-[1.2px] text-spring-green">Market Opportunity</p>
-                  <p className="mt-3 font-serif text-4xl text-white">$1.5T</p>
-                  <p className="mt-3 text-sm text-slate-300">Projected market cap for new climate industrials by 2040.</p>
+                <div className="rounded-[2px] border border-white/30 bg-[rgba(236,253,245,0.15)] p-[25px]">
+                  <p className="font-mono text-[12px] uppercase tracking-[1.2px] text-spring-green">Market Opportunity</p>
+                  <p className="mt-3 font-serif text-[48px] leading-[56px] text-white">$1.5T</p>
+                  <p className="mt-3 text-[16px] leading-[20px] text-slate-400">
+                    Projected market cap for new climate industrials by 2040.
+                  </p>
                 </div>
               </div>
             </div>
@@ -493,20 +503,46 @@ export default function App() {
           </div>
         </section>
 
-        <section className="bg-racing-green py-24">
-          <div className="mx-auto max-w-[1232px] px-6 text-center">
-            <h2 className="font-serif text-4xl text-white md:text-5xl">Your sourcing logic. Automatically.</h2>
-            <p className="mt-4 text-sm text-slate-300">
+        <section className="border-t border-white/5 bg-[#060a08] pb-[80px] pt-[81px]">
+          <div className="mx-auto max-w-[1280px] px-6 text-center">
+            <h2 className="font-serif text-[60px] leading-[40px] text-white">
+              Your sourcing logic. <span className="font-serif italic text-spring-green">Automatically.</span>
+            </h2>
+            <p className="mt-4 text-[18px] leading-[16px] text-[#cbd5e1]">
               Frond parses thousands of technical documents against your specific investment thesis, alerting you only when the science matches your strategy.
             </p>
-            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {pipelineSteps.map((step) => (
-                <div key={step.title} className="rounded-[4px] border border-spring-green/30 bg-spring-green/20 p-6 text-left shadow-[0_1px_2px_rgba(0,0,0,0.25)]">
-                  <p className="font-mono text-xs uppercase tracking-[1.2px] text-spring-green">{step.number}</p>
-                  <h3 className="mt-3 font-display text-xl font-semibold text-white">{step.title}</h3>
-                  <p className="mt-3 text-sm text-slate-300">{step.copy}</p>
-                  <div className="mt-6 h-1 w-full rounded-full bg-slate-200">
-                    <div className="h-full w-2/3 rounded-full bg-spring-green/80" />
+                <div
+                  key={step.title}
+                  className={`flex min-h-[255px] flex-col rounded-[2px] border p-[25px] text-left shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] ${
+                    step.active
+                      ? 'border-[rgba(61,184,124,0.4)] bg-[rgba(61,184,124,0.2)]'
+                      : 'border-[rgba(61,184,124,0.1)] bg-[#0f1612]'
+                  }`}
+                >
+                  <div className="flex-1">
+                    <p
+                      className={`font-mono text-[24px] uppercase leading-[16px] tracking-[1.2px] ${
+                        step.active ? 'text-[rgba(61,184,124,0.9)]' : 'text-slate-400'
+                      }`}
+                    >
+                      {step.number}
+                    </p>
+                    <h3 className="mt-3 font-display text-[24px] font-semibold leading-[28px] text-white">{step.title}</h3>
+                    <p className={`mt-3 text-[14px] leading-[20px] ${step.active ? 'text-[#cbd5e1]' : 'text-slate-400'}`}>
+                      {step.copy}
+                    </p>
+                  </div>
+                  <div
+                    className={`mt-4 h-[4px] w-full rounded-full ${
+                      step.active ? 'bg-[#1f6152]' : 'bg-[#f1f5f9]'
+                    }`}
+                  >
+                    <div
+                      className={`h-full rounded-full ${step.active ? 'bg-spring-green' : 'bg-[rgba(61,184,124,0.8)]'}`}
+                      style={{ width: `${Math.round(step.progress * 100)}%` }}
+                    />
                   </div>
                 </div>
               ))}
@@ -514,69 +550,87 @@ export default function App() {
           </div>
         </section>
 
-        <section className="bg-racing-green py-24" id="pricing">
-          <div className="mx-auto max-w-[1280px] px-6 text-center">
-            <h2 className="font-serif text-4xl text-white">Access the Terminal</h2>
-            <p className="mt-4 text-sm text-slate-400">Start with intelligence. Scale to enterprise-grade diligence.</p>
-            <div className="mt-12 grid gap-8 lg:grid-cols-3">
+        <section className="relative overflow-hidden py-[120px]" id="pricing">
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, #060a08 0%, #0c2218 100%)' }} />
+          <div className="relative mx-auto max-w-[1280px] px-6 text-center">
+            <h2 className="font-serif text-[42px] leading-[40px] text-white">Access the Terminal</h2>
+            <p className="mt-4 text-[15px] leading-[24px] text-[#94a3b8]">
+              Start with intelligence. Scale to enterprise-grade diligence.
+            </p>
+            <div className="mt-16 grid gap-8 lg:grid-cols-3">
               {pricingTiers.map((tier) => (
                 <div
                   key={tier.name}
-                  className={`relative rounded-[10px] border p-8 text-left ${
+                  className={`relative flex h-full flex-col rounded-[8px] border px-[33px] py-[32px] text-left ${
                     tier.highlight
-                      ? 'border-spring-green bg-[#0c2218] shadow-[0_0_35px_rgba(61,184,124,0.35)]'
-                      : 'border-spring-green/20 bg-[#0f1612]'
+                      ? 'border-[rgba(61,184,124,0.4)] bg-[#142921] shadow-[0px_0px_20px_rgba(61,184,124,0.25)]'
+                      : 'border-white/5 bg-[#0c2218]'
                   }`}
                 >
                   {tier.highlight && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-spring-green px-4 py-1 text-xs font-bold text-racing-green">
+                    <span className="absolute -top-5 left-1/2 -translate-x-1/2 rounded-full bg-spring-green px-5 py-1 text-[12px] font-bold uppercase tracking-[0.6px] text-[#060a08]">
                       Most Popular
                     </span>
                   )}
-                  <h3 className="font-display text-2xl font-semibold text-white">{tier.name}</h3>
-                  <p className="mt-4 text-sm text-slate-400">{tier.blurb}</p>
-                  <div className="mt-5 text-3xl font-semibold text-white">
-                    {tier.price}{' '}
-                    <span className="text-sm font-normal text-slate-400">{tier.suffix}</span>
+                  <div>
+                    <h3 className="font-display text-[20px] font-bold text-white">{tier.name}</h3>
+                    <p className="mt-4 text-[13px] leading-[20px] text-[#94a3b8]">{tier.blurb}</p>
+                    <div className="mt-5 flex items-baseline gap-3">
+                      <span className="font-mono text-[32px] leading-[36px] text-white">{tier.price}</span>
+                      <span className="text-[13px] text-[#64748b]">{tier.suffix}</span>
+                    </div>
                   </div>
-                  <ul className="mt-6 space-y-3 text-sm text-slate-200">
+                  <ul className="mt-8 space-y-4 text-[14px] text-[#cbd5e1]">
                     {tier.features.map((feature) => (
                       <li key={feature.label} className="flex items-center gap-3">
-                        <img src={feature.icon} alt="" aria-hidden="true" className="h-3 w-3" />
+                        <img src={feature.icon} alt="" aria-hidden="true" className="h-4 w-4" />
                         {feature.label}
                       </li>
                     ))}
                   </ul>
-                  <button
-                    className={`mt-8 w-full rounded-[6px] px-5 py-3 text-sm font-semibold ${
-                      tier.highlight
-                        ? 'bg-spring-green text-racing-green'
-                        : 'border border-spring-green/40 text-spring-green'
-                    }`}
-                  >
-                    {tier.cta}
-                  </button>
+                  <div className="mt-auto">
+                    <button
+                      className={`mt-8 w-full rounded-[6px] px-5 py-[13px] text-[15px] font-semibold ${
+                        tier.highlight
+                          ? 'bg-spring-green text-[#060a08]'
+                          : 'border border-white/20 text-white'
+                      }`}
+                    >
+                      {tier.cta}
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="relative overflow-hidden bg-racing-green py-20">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle,rgba(61,184,124,0.35),rgba(15,22,18,0))]" />
-          <div className="relative mx-auto max-w-[768px] px-6 text-center">
-            <h2 className="font-serif text-3xl text-white md:text-4xl">
-              Join 850+ investors already moving capital through the Valley of Death.
+        <section className="relative overflow-hidden bg-[#091410] px-6 py-16">
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.5) 0%, #0c2218 70%)' }}
+          />
+          <div
+            className="pointer-events-none absolute left-0 right-0 top-0 h-px"
+            style={{
+              background: 'linear-gradient(90deg, rgba(61,184,124,0) 0%, rgba(61,184,124,0.3) 50%, rgba(61,184,124,0) 100%)',
+            }}
+          />
+          <div className="relative mx-auto flex max-w-[768px] flex-col items-center gap-12 text-center">
+            <h2 className="font-serif text-[60px] leading-[60px] text-white">
+              Join 850+ investors already moving
+              <br />
+              capital through the Valley of Death.
             </h2>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <form className="flex w-full flex-col gap-4 sm:flex-row" onSubmit={(event) => event.preventDefault()}>
               <input
-                className="flex-1 rounded-[6px] border border-slate-700 bg-[#0c2218] px-4 py-3 text-sm text-slate-200"
+                className="flex-1 rounded-[4px] border border-[#2a4d40] bg-[#0c2218] px-4 py-[14px] font-mono text-[14px] text-white placeholder-[#6b7280]"
                 placeholder="findfoak@gmail.com"
               />
-              <button className="rounded-[6px] bg-spring-green px-6 py-3 text-sm font-semibold text-racing-green">
-                Join Waitlist
+              <button className="rounded-[4px] border border-[rgba(61,184,124,0.1)] bg-[#1f3a2f] px-8 py-[14px] font-display text-[14px] font-medium text-spring-green">
+                Request Access
               </button>
-            </div>
+            </form>
           </div>
         </section>
       </main>
