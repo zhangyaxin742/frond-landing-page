@@ -265,7 +265,7 @@ export default function App() {
           <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-racing-green to-transparent" />
         </section>
 
-        <section className="border-b border-spring-green/20 bg-[#060a08] py-24">
+ {/*      <section className="border-b border-spring-green/20 bg-[#060a08] py-24">
           <div className="mx-auto max-w-[1280px] px-6 text-center">
             <h2 className="flex flex-wrap items-center justify-center gap-2 font-serif text-3xl italic text-slate-200 md:text-5xl">
               <span>“Do not even</span>
@@ -450,7 +450,7 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="bg-black py-24" id="methodology">
           <div className="mx-auto grid max-w-[1400px] gap-[96px] px-6 lg:grid-cols-[1.05fr_1fr]">
