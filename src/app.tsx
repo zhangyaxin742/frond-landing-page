@@ -2,7 +2,7 @@ import logoMark from './assets/vector-580.svg'
 import playIcon from './assets/vector-529.svg'
 import linkedInIcon from './assets/vector-20.svg'
 import xIcon from './assets/vector-17.svg'
-import scoutCheck1 from './assets/vector-109.svg'
+{/* import scoutCheck1 from './assets/vector-109.svg'
 import scoutCheck2 from './assets/vector-114.svg'
 import scoutCheck3 from './assets/vector-119.svg'
 import analystCheck1 from './assets/vector-177.svg'
@@ -13,10 +13,10 @@ import enterpriseCheck1 from './assets/vector-141.svg'
 import enterpriseCheck2 from './assets/vector-146.svg'
 import enterpriseCheck3 from './assets/vector-151.svg'
 import enterpriseCheck4 from './assets/vector-156.svg'
-import enterpriseBadgeIcon from './assets/vector-129.svg'
+import enterpriseBadgeIcon from './assets/vector-129.svg' */}
 import matchIconPrimary from './assets/vector-293.svg'
 import matchIconSecondary from './assets/vector-346.svg'
-import trlMarkerIcon from './assets/vector-403.svg'
+{/* import trlMarkerIcon from './assets/vector-403.svg' */}
 
 const marqueePrimary = [
   'USPTO Y02 PATENTS',
@@ -123,7 +123,7 @@ const pipelineSteps = [
   },
 ]
 
-const pricingTiers = [
+{/* const pricingTiers = [
   {
     name: 'Scout',
     blurb: 'For angels & researchers tracking early signals. Essential monitoring for independent researchers.',
@@ -167,7 +167,7 @@ const pricingTiers = [
     variant: 'enterprise',
     badgeIcon: enterpriseBadgeIcon,
   },
-]
+] */}
 
 const footerColumns = {
   Platform: ['Technologies', 'Matching Engine', 'API Docs', 'Pricing'],
@@ -265,7 +265,8 @@ export default function App() {
           <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-racing-green to-transparent" />
         </section>
 
- {/*      <section className="border-b border-spring-green/20 bg-[#060a08] py-24">
+ {/* TRL Visualization - Temporarily hidden */}
+        {/* <section className="border-b border-spring-green/20 bg-[#060a08] py-24">
           <div className="mx-auto max-w-[1280px] px-6 text-center">
             <h2 className="flex flex-wrap items-center justify-center gap-2 font-serif text-3xl italic text-slate-200 md:text-5xl">
               <span>“Do not even</span>
@@ -497,53 +498,6 @@ export default function App() {
           </div>
         </section>
 
-        <section className="bg-[#0c2218] py-[96px]">
-          <div className="mx-auto flex max-w-[1280px] flex-col gap-12 px-6">
-            <div className="flex items-center gap-3 border-b border-[#047857] pb-[17px]">
-              <h3 className="font-mono text-[32px] uppercase leading-[20px] tracking-[1.4px] text-[#7edcb0]">
-                Live sourcing feed
-              </h3>
-              <span className="h-4 w-4 rounded-full bg-spring-green" />
-              <span className="ml-auto font-mono text-[16px] uppercase leading-[16px] text-[#7a9e8c]">3 new in the last hour</span>
-            </div>
-            <div className="grid gap-6 lg:grid-cols-2">
-              {feedCards.map((card) => (
-                <div key={card.title} className="relative h-[222.5px] rounded-[8px] border border-[#1e5c3e] bg-[#0c2218] px-[24px] pb-[24px] pt-[23.75px]">
-                  <div className="flex items-center justify-between text-[11px] font-mono uppercase leading-[16.5px] text-[#7a9e8c]">
-                    <span>{card.tag}</span>
-                    <span className={card.status.includes('New') ? 'text-spring-green' : 'text-[#7a9e8c]'}>{card.status}</span>
-                  </div>
-                  <h4 className="mt-[12px] font-serif text-[20px] font-medium leading-[28px] text-[#f1f5f9]">
-                    {card.title}
-                  </h4>
-                  <p className="mt-[8px] font-display text-[14px] leading-[20px] text-[#7a9e8c]">{card.meta}</p>
-                  <div className="mt-[12px] flex flex-wrap gap-2">
-                    {card.tags.map((tag: FeedTag) => (
-                      <span
-                        key={tag.label}
-                        className={`rounded-[4px] px-[8px] py-[4px] text-[10px] font-mono uppercase leading-[15px] tracking-[0.25px] ${
-                          tag.variant === 'amber'
-                            ? 'bg-[rgba(246,239,166,0.3)] text-amber-signal'
-                            : 'bg-[#14392a] text-[#b8f5d8]'
-                        } ${tag.minWidth ?? ''}`}
-                      >
-                        {tag.label}
-                      </span>
-                    ))}
-                  </div>
-                  {card.matches && (
-                    <div className="mt-[12px] flex items-center gap-2 border-t border-[#14392a] pt-[13px] text-[10px] font-mono uppercase leading-[15px] tracking-[0.25px] text-[#13ecec]">
-                      <img src={card.matchIcon} alt="" aria-hidden="true" className="h-4 w-[14px]" />
-                      {card.matches}
-                    </div>
-                  )}
-                  <span className={`absolute left-0 top-0 h-full w-[2px] ${card.accent}`} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="border-t border-white/5 bg-[#060a08] pb-[80px] pt-[81px]">
           <div className="mx-auto max-w-[1280px] px-6 text-center">
             <h2 className="font-serif text-[60px] leading-[40px] text-white">
@@ -591,7 +545,55 @@ export default function App() {
           </div>
         </section>
 
-        <section className="bg-gradient-to-b from-[#060a08] to-[#0c2218] pb-[96px] pt-[64px]" id="pricing">
+        <section className="bg-[#0c2218] py-[96px]">
+          <div className="mx-auto flex max-w-[1280px] flex-col gap-12 px-6">
+            <div className="flex items-center gap-3 border-b border-[#047857] pb-[17px]">
+              <h3 className="font-mono text-[32px] uppercase leading-[20px] tracking-[1.4px] text-[#7edcb0]">
+                Live sourcing feed
+              </h3>
+              <span className="h-4 w-4 rounded-full bg-spring-green" />
+              <span className="ml-auto font-mono text-[16px] uppercase leading-[16px] text-[#7a9e8c]">3 new in the last hour</span>
+            </div>
+            <div className="grid gap-6 lg:grid-cols-2">
+              {feedCards.map((card) => (
+                <div key={card.title} className="relative h-[222.5px] rounded-[8px] border border-[#1e5c3e] bg-[#0c2218] px-[24px] pb-[24px] pt-[23.75px]">
+                  <div className="flex items-center justify-between text-[11px] font-mono uppercase leading-[16.5px] text-[#7a9e8c]">
+                    <span>{card.tag}</span>
+                    <span className={card.status.includes('New') ? 'text-spring-green' : 'text-[#7a9e8c]'}>{card.status}</span>
+                  </div>
+                  <h4 className="mt-[12px] font-serif text-[20px] font-medium leading-[28px] text-[#f1f5f9]">
+                    {card.title}
+                  </h4>
+                  <p className="mt-[8px] font-display text-[14px] leading-[20px] text-[#7a9e8c]">{card.meta}</p>
+                  <div className="mt-[12px] flex flex-wrap gap-2">
+                    {card.tags.map((tag: FeedTag) => (
+                      <span
+                        key={tag.label}
+                        className={`rounded-[4px] px-[8px] py-[4px] text-[10px] font-mono uppercase leading-[15px] tracking-[0.25px] ${
+                          tag.variant === 'amber'
+                            ? 'bg-[rgba(246,239,166,0.3)] text-amber-signal'
+                            : 'bg-[#14392a] text-[#b8f5d8]'
+                        } ${tag.minWidth ?? ''}`}
+                      >
+                        {tag.label}
+                      </span>
+                    ))}
+                  </div>
+                  {card.matches && (
+                    <div className="mt-[12px] flex items-center gap-2 border-t border-[#14392a] pt-[13px] text-[10px] font-mono uppercase leading-[15px] tracking-[0.25px] text-[#13ecec]">
+                      <img src={card.matchIcon} alt="" aria-hidden="true" className="h-4 w-[14px]" />
+                      {card.matches}
+                    </div>
+                  )}
+                  <span className={`absolute left-0 top-0 h-full w-[2px] ${card.accent}`} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+    {/* Pricing Section - Temporarily hidden */}
+        {/* <section className="bg-gradient-to-b from-[#060a08] to-[#0c2218] pb-[96px] pt-[64px]" id="pricing">
           <div className="mx-auto max-w-[1280px] px-6">
             <div className="text-center">
               <h2 className="font-serif text-[42px] leading-[40px] text-white">Access the Terminal</h2>
@@ -653,7 +655,7 @@ export default function App() {
               })}
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="relative overflow-hidden bg-[#091410] py-[48px]">
           <div
